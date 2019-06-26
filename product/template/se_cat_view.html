@@ -1,0 +1,12 @@
+<html>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {% for produ in prod %}
+        <input type="text" value="{{ produ.l_name}}" >
+        {% endfor %}
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <style>
+        ul li {
+            list-style: none;
+        }
+        </style>
+</head>
+
+<body>
+    <h3>Catogery Search</h3>
+    <form method='POST' action="/searchcatogery">
+        {% csrf_token %}
+        <ul>
+            <li>
+                <select name="catogery" style="width:100px">
+                    {% for cate in form %}
+                    <option value="{{ cate.p_product}}">{{ cate.p_product}}</option>
+                    {% endfor %}
+                </select>
+            </li>
+        </ul>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
